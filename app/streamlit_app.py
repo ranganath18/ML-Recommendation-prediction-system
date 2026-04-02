@@ -28,7 +28,16 @@ feature_order = pickle.load(open(feature_path, "rb"))
 # LOAD DATASET
 # ============================================
 
+import os
+import pandas as pd
+
+BASE_DIR = os.path.dirname(__file__)
+
 data_path = os.path.join(BASE_DIR, "../data/events_sample2.csv")
+
+print("DATA PATH:", data_path)   # debug
+print("FILES:", os.listdir(os.path.join(BASE_DIR, "../data")))  # debug
+
 df = pd.read_csv(data_path)
 
 # Convert timestamp to datetime
