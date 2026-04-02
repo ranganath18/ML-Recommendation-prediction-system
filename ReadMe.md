@@ -1,10 +1,8 @@
 # 🛒 AI-Powered E-Commerce Recommendation & Purchase Prediction System
+# 🔗 **Try the app here:** 
 
-![Python](https://img.shields.io/badge/Python-3.10-blue?logo=python)
-![XGBoost](https://img.shields.io/badge/Model-XGBoost-orange)
-![Streamlit](https://img.shields.io/badge/Frontend-Streamlit-red?logo=streamlit)
-![Status](https://img.shields.io/badge/Status-Active-success)
-![License](https://img.shields.io/badge/License-MIT-green)
+👉 [Launch App](https://ml-recommendation-prediction-system-dyd2id4bfs92v7fycow4y3.streamlit.app/)
+
 
 ---
 
