@@ -13,17 +13,17 @@ import pandas as pd            # Data handling
 # ============================================
 
 # Load trained ML model
-model = pickle.load(open("rf_model_v1.pkl", "rb"))
+model = pickle.load(open("model/rf_model_v1.pkl", "rb"))
 
 # Load feature order
-feature_order = pickle.load(open("features_v1.pkl", "rb"))
+feature_order = pickle.load(open("model/features_v1.pkl", "rb"))
 
 
 # ============================================
 # LOAD DATASET
 # ============================================
 
-df = pd.read_csv("events_sample2.csv")
+df = pd.read_csv("data/events_sample2.csv")
 
 # Convert timestamp to datetime
 df['timestamp'] = pd.to_datetime(df['timestamp'])
@@ -155,14 +155,14 @@ if st.button("🚀 Recommend & Predict"):
 
 
     # ============================================
-    # 📊 STEP 10: SORT RESULTS
+    # SORT RESULTS
     # ============================================
 
     results = sorted(results, key=lambda x: x[1], reverse=True)
 
 
     # ============================================
-    # 📢 STEP 11: DISPLAY OUTPUT
+    # DISPLAY OUTPUT
     # ============================================
 
     st.subheader("🎯 Recommended Items")
