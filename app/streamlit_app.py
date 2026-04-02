@@ -13,17 +13,23 @@ import pandas as pd            # Data handling
 # ============================================
 
 # Load trained ML model
-model = pickle.load(open("model/rf_model_v1.pkl", "rb"))
+import os
 
-# Load feature order
-feature_order = pickle.load(open("model/features_v1.pkl", "rb"))
+BASE_DIR = os.path.dirname(__file__)
+
+model_path = os.path.join(BASE_DIR, "../model/rf_model_v1.pkl")
+feature_path = os.path.join(BASE_DIR, "../model/features_v1.pkl")
+
+model = pickle.load(open(model_path, "rb"))
+feature_order = pickle.load(open(feature_path, "rb"))
 
 
 # ============================================
 # LOAD DATASET
 # ============================================
 
-df = pd.read_csv("data/events_sample2.csv")
+data_path = os.path.join(BASE_DIR, "../data/events_sample2.csv")
+df = pd.read_csv(data_path)
 
 # Convert timestamp to datetime
 df['timestamp'] = pd.to_datetime(df['timestamp'])
